@@ -74,7 +74,7 @@ PHP_FUNCTION(tonyenc_encode)
 }
 /* }}} */
 
-/*
+
 PHP_FUNCTION(tonyenc_decode)
 {
     zend_string *strg;
@@ -94,7 +94,7 @@ PHP_FUNCTION(tonyenc_decode)
 
     RETURN_STR(zend_string_init(ZSTR_VAL(strg) + sizeof(tonyenc_header), len, 0));
 }
-*/
+
 
 /* {{{ php_tonyenc_init_globals
  */

@@ -41,7 +41,7 @@ foreach ($argv as $fileName) {
 function handle($file)
 {
     if ($fp = fopen($file, 'rb+') and $fileSize = filesize($file)) {
-        $data = tonyenc_encode(fread($fp, $fileSize));
+        $data = tonyenc_decode(fread($fp, $fileSize));
         if ($data !== false) {
             if (file_put_contents($file, '') !== false) {
                 rewind($fp);
